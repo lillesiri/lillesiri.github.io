@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Tag for å håndtere skjermstørrelse og responsivt design -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kantine</title>
+        <link rel="stylesheet" href="../stylesheet/mystyle.css">
+        <!-- Ikoner til sosiale medier i footer -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <!-- Brukt inspirasjon fra videoen til Tengel som ligger på canvas om hamburgermeny -->
+                <div>
+                    <a href="../index.html"><img class="logo-pic" 
+                        src="https://kommunikasjon.ntb.no/data/images/00339/dcb25c97-e530-4d45-804e-4883a9a9ce9d.png" 
+                        alt="Bilde av Oslomets logo">
+                    </a>
+                </div>
+                <!-- Hamburgermeny for responsivt design -->
+                <input id="menu-toggle" type="checkbox">
+                <label for="menu-toggle">
+                    <div class="menu-icon"></div>
+                </label>
+                <ul class="menu">
+                    <li class="nav-link"><a href="accessibility.html">Accessibility</a></li>
+                    <li class="nav-link"><a href="topical.html">Topical</a></li>
+                    <li class="nav-link"><a href="auditorium.html">Auditorium</a></li>
+                </ul>  
+            </nav>
+        </header>
+
+        <main>
+            <!-- En grid-container med tre kolonner og tre rader -->
+            <div class="kantine">
+                <!-- 
+                Grid-box med background image og overskrift. Siden bildet er lagt inn som 
+                background-image i div-en fungerer title-attributen her som alt-tekst.
+                -->
+                <div class="box-1" title="Bilde av mat på fat med teksten 'Kantine' øverst. Foto: Alexander Kovacs/unsplash">
+                    <h1>Kantine</h1>
+                </div>
+                <!-- Grid-boxes med background images, title-attributten brukes som alt-tekst til bildene -->
+                <div class="kantine-pics">
+                    <div class="box-2" title="Kantinen i Aurora Arntzens-hus. Foto: OsloMet"></div>
+                    <figcaption>Kantinen i P32. Foto:<a class="links-in-text" href="https://www.oslomet.no" target="_blank">
+                        OsloMet</a>
+                    </figcaption>
+                </div>
+                <div class="kantine-pics">
+                    <div class="box-3" title="Kassen i en kantine på OsloMet. Foto: OsloMet"></div>
+                    <figcaption>Selvbetjent kasse i kantinen. Foto:<a class="links-in-text" href="https://www.oslomet.no" 
+                        target="_blank">OsloMet</a>
+                    </figcaption>
+                </div>
+                <div class="kantine-pics">
+                    <div class="box-4" title="Salatbar med grønnsaker. Foto: Jonathan Borba/unsplash"></div>
+                    <figcaption>Salatbar. Foto:<a class="links-in-text" href="https://unsplash.com/@jonathanborba" 
+                        target="_blank">Jonathan Borba</a>/<a class="links-in-text" href="https://unsplash.com" 
+                        target="_blank">unsplash</a>
+                    </figcaption>
+                </div>
+                <!-- Grid-box som innholder tekst -->
+                <div class="box-5">
+                    <h2>Lorem ipsum dolor sit amet</h2>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae idquo reiciendis 
+                        doloribus perspiciatis minima blanditiis minus! Non facilis aspernatur sed officia est, 
+                        distinctio obcaecati, quisquam eveniet dolorum laborum maxime eius animi alias commodi nobis 
+                        rerum excepturi? Est, harum non architecto neque similique odit nisi minus eveniet obcaecati! 
+                        Alias, suscipit!
+                    </p>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut sequi esse et laborum 
+                        consequatur totam quis! Exercitationem aperiam, nesciunt ipsam ex fugiat optio voluptate 
+                        doloremque. Fusce quis elit auctor, tempor nibh non, eleifend lectus. Donec non turpis sagittis, 
+                        acilisis arcu vitae, porta ex. Mauris consequat blandit lacus. Nam ac tristique libero. Fusce 
+                        lobortis malesuada velit non placerat. Maecenas eu maximus lacus, eget ullamcorper mi. In 
+                        pharetra dolor porta tristique auctor. Fusce laoreet dolor eget elit ornare, ut vestibulum ex molestie.
+                    </p>
+                    <h2>Proin eu scelerisque ante, sit amet feugiat</h2>
+                    <p class="text">Nunc commodo velit id finibus auctor. Cras vel consectetur nunc. Etiam odio dui, 
+                        suscipit a ipsum ut, iaculis rutrum nisi. Maecenas id pharetra orci. Vivamus lorem leo, aliquam 
+                        ut congue at, imperdiet ut lectus. Donec efficitur non sapien at consectetur. Donec facilisis 
+                        ipsum sed semper commodo. In eget ligula porta, maximus risus faucibus, dictum velit. Ut ipsum 
+                        eros, egestas in laoreet facilisis, convallis et lorem. In hac habitasse platea dictumst. Fusce 
+                        finibus ullamcorper volutpat. In hac habitasse platea dictumst. Vivamus at gravida mi, sit amet 
+                        fringilla sapien. Donec tempor nec dui in convallis.
+                    </p>
+                    <p class="text">Ut nec ultricies erat, eget mattis lorem. Cras vitae convallis lorem, in vulputate 
+                        dui. Nunc magna mauris, venenatis quis lacus in, lacinia finibus lacus. Sed id velit in tellus 
+                        dictum molestie in a ligula. Phasellus pharetra eu eros dictum gravida. Vestibulum in nulla 
+                        malesuada, fringilla ante ut, tristique sapien. Nullam a augue malesuada, scelerisque lectus et, 
+                        semper mi. Phasellus et dui imperdiet, dictum diam in, pharetra nulla. Fusce a purus quis leo 
+                        volutpat imperdiet. Curabitur tempus convallis dui, maximus rhoncus orci elementum eget.
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Brukt inspirasjon fra Tengels CompletePage-videoer som ligger i Canvas -->
+        <footer class="text"> 
+            <!-- Venstre del av footer med "vår" kontaktinformasjon -->
+            <div class="footer-left">
+                <p class="footer-title">Kontakt oss:</p>
+                <p>Telefon: 67 23 50 00 <br>
+                   E-post: <a href="mailto:sentralbord@oslomet.no" class="footer-link">sentralbord@oslomet.no</a></p>
+            </div>
+            <!-- Midtre del av footer med link til "våre" sosiale medier -->
+            <div class="footer-mid">
+                <p class="footer-title">Sosiale medier:</p>
+                <p><a href="https://www.facebook.com/oslomet/" class="footer-link" target="_blank"><i class="fa fa-facebook"></i>
+                     &#20Facebook </a><br>
+                   <a href="https://twitter.com/oslomet" class="footer-link" target="_blank"><i class="fa fa-twitter"></i>
+                     Twitter</a> <br>
+                   <a href="https://no.linkedin.com/school/oslomet/" class="footer-link" target="_blank"><i class="fa fa-linkedin"></i>
+                     &#20LinkedIn</a></p>
+            </div>
+            <!-- Høyre del av footer med info om "oss" -->
+            <div class="footer-right">
+                <p class="footer-title">Besøk oss:</p>
+                <p>Campus Pilestredet <br>
+                    Pilestredet 35 <br>
+                    0166 Oslo
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
