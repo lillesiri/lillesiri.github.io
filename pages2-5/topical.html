@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Tag for å håndtere skjermstørrelse og responsivt design -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Topical page</title>
+        <link rel="stylesheet" href="../stylesheet/mystyle.css">
+        <!-- Ikoner til sosiale medier i footer -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <!-- Brukt inspirasjon fra videoen til Tengel som ligger på canvas om hamburgermeny -->
+                <div>
+                    <a href="../index.html"><img class="logo-pic" 
+                        src="https://kommunikasjon.ntb.no/data/images/00339/dcb25c97-e530-4d45-804e-4883a9a9ce9d.png" 
+                        alt="Bilde av Oslomets logo">   
+                    </a>
+                </div>
+                <!-- Hamburgermeny for responsivt design -->
+                <input id="menu-toggle" type="checkbox">
+                <label for="menu-toggle">
+                    <div class="menu-icon"></div>
+                </label>
+                <ul class="menu">
+                    <li class="nav-link"><a href="accessibility.html">Accessibility</a></li>
+                    <li class="nav-link"><a href="auditorium.html">Auditorium</a></li>
+                    <li class="nav-link"><a href="kantine.html">Kantine</a></li>
+                </ul>  
+            </nav>
+        </header>
+
+        <main>
+            <article>
+                <h1>Topical</h1>
+                <div class="layout-top">
+                    <div class="pictures first-pic">
+                        <img src="../bilder/skyscrapers.jpg" alt="Bildet viser skyline til en smartby" title="Foto: Tumisu / Pixabay">
+                    </div>
+                    <figcaption>Foto: <a class="links-in-text" 
+                        href="https://pixabay.com/users/tumisu-148124/?utm_source=link-attribution&utm_medium=referral&utm_
+                        campaign=image&utm_content=4168483" target="_blank">Tumisu</a> / <a class="links-in-text" 
+                        href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4168483" 
+                        target="_blank">Pixabay</a>
+                    </figcaption>
+                </div>
+                <!-- En grid-container med 1 rad og 2 kolonner, hvor kolonne 2 er tom slik at teksten er på linje med 
+                    resten av teksten på siden -->
+                <div class="grid-1x2">
+                    <div>
+                        <h2>The interplay between technology and society</h2>
+                        <p class="text">Situasjonen handler om hvordan satellitteknologi påvirker samfunnet, vi ser en 
+                            endring fra undersjøiske og underjordiske kabler til satellitter. Samfunnet blir mer og mer 
+                            <a class="links-in-text" href="https://snl.no/digitalisering" target="_blank">digitalisert</a>, 
+                            dermed kan kablet teknologi virke utdatert. Overgangen fra kabler til satellitter kan ha både 
+                            negative og positive effekter. Med tanke på nasjonal sikkerhet kan satellitter være fordelaktig 
+                            da det er vanskeligere å sabotere. Et annet perspektiv er at satellitter kan føre til svekket 
+                            personvern ettersom private aktører sitter på informasjonen til folk sammenlignet med det 
+                            offentlige. Med tanke på vårt fremtidige yrke kan dette medføre økte arbeidsmuligheter og 
+                            nye utfordringer.
+                        </p>
+                    </div>
+                </div>
+                <!-- Samme grid-container, men med tekst i første kolonne/boks og et bilde i andre -->
+                <div class="grid-1x2">
+                    <div>
+                        <h2>Fake news and critical thinking</h2>
+                        <p class="text">Spørsmålet er om det skal gjennomføres en lov som skal forby all bruk av 
+                            <a class="links-in-text" href="https://snl.no/kunstig_intelligens" target="_blank">kunstig 
+                            intelligens</a> i politiske kampanjer. Casen er svært relevant ettersom bruken og utviklingen 
+                            av kunstig intelligens har økt, særlig politisk og kalles ofte <a class="links-in-text" 
+                            href="https://en.wikipedia.org/wiki/Deepfake" target="_blank">«deepfakes»</a>. Det har vært 
+                            observert i diverse land, de mest velkjente eksemplene kommer gjerne fra USA. Casen er svært 
+                            relevant for vårt fremtidige yrke ettersom det er vi og folk som oss som utvikler dette.
+                        </p>
+                        <p class="text">Våre umiddelbare reaksjoner på proposisjonen er at denne loven burde bli 
+                            implementert og at dette vil føre til et mer rettferdig valg. Dette er grunnet de 
+                            negative sidene ved kunstig intelligens, for eksempel spredning av falsk informasjon via 
+                            deepfakes. Forslaget kan bidra til økt opplysning, og en demokratisk debatt på rett 
+                            grunnlag (Oslomet, 2023a). På den andre siden kan et slikt forslag føre til at feilaktig 
+                            KI-generert informasjon ikke nødvendigvis forsvinner, men heller blir spredt i lukkede 
+                            grupper, uten at man kan møte grupper med alternative forståelser til debatt.    
+                        </p>
+                        <!-- Div-klasse med flex for ul listen som ligger i "tekst"-kolonna/boksen -->
+                        <div class="list-in-text">
+                            <ul>
+                                <h3>2 potensielt positive aspekter ved den foreslåtte loven</h3>
+                                <li class="text">Loven tar hovedsakelig sikte på å bekjempe <a class="links-in-text" 
+                                    href="https://snl.no/falske_nyheter" target="_blank">falske nyheter</a>. Dermed kan 
+                                    loven beskytte allmennhetens rett til å motta nyheter eller tilgang til informasjon.
+                                </li>
+                                <li class="text">Slike applikasjoner og verktøy brukes vanligvis av grupper med bedre 
+                                    økonomiske midler. Av denne grunn kan det bli et urettferdig løp i valget. Takket være 
+                                    denne loven skjer valg på like vilkår. 
+                                </li>
+                            </ul>
+                            <ul>
+                                <h3>2 potensielt negative aspekter ved den foreslåtte loven</h3>
+                                <li class="text"><a class="links-in-text" 
+                                    href="https://www.digdir.no/digitalisering-og-samordning/digital-transformasjon/3297" 
+                                    target="_blank">Digital transformasjon</a> har mange fordeler. Disse tidene kan 
+                                    skyve partier og politikere vekk fra digitalisering. Denne situasjonen bremser 
+                                    utviklingen av norsk politisk kultur når det gjelder digitalisering.
+                                </li>
+                                <li class="text">I <a class="links-in-text" href="https://snl.no/demokrati" 
+                                    target="_blank">demokratier</a> er det ikke bare regjeringen, men også opposisjonen. 
+                                    Slike lover kan brukes av regjeringen for å skremme opposisjonspartier eller opposisjonsgrupper. 
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <!-- Div-klasse for bilde-kolonna/boksen -->
+                        <div class="grid-picture1">
+                            <img class="pictures" src="../bilder/fake-news.jpg" 
+                                alt="Svart bakgrunn med hvit tekst som sier 'Fake or real'" title="Foto: Freepik">
+                        </div>
+                        <figcaption>Foto: <a class="links-in-text" href="https://www.freepik.com/free-photo/sticky-notes-
+                            with-fake-news_12810739.htm#query=fake%20news%20ai&position=2&from_view=search&track=ais" 
+                            target="_blank">Freepik</a>
+                        </figcaption>
+                    </div>
+                </div>
+                <!-- Lik grid-container som forrige, tekst i første kolonne/boks og bildet i andre -->
+                <div class="grid-1x2">
+                    <div>
+                        <h2>Digital cities and the welfare state</h2>
+                        <p class="text">Den situasjonen vi står overfor involverer et forslag fra <a class="links-in-text" 
+                            href="https://www.sidewalklabs.com/" target="_blank">Sidewalk Labs</a>, et datterselskap av 
+                            Google/Alphabet, om å konstruere et smartbyområde i Grønlikaia, Oslo. Casen befinner seg i 
+                            skjæringspunktet mellom samfunn og teknologi, og representerer et avgjørende øyeblikk innen 
+                            urban utvikling der digital teknologi og datadrevne løsninger blir integrert i byens struktur. 
+                            Som fremtidige fagpersoner innen ulike felt, er det vårt ansvar å evaluere mulige konsekvenser 
+                            og virkninger av et slikt forslag på beboerne, byens infrastruktur og bredere samfunnsmessige 
+                            implikasjoner. Denne casen stiller viktige spørsmål om balansen mellom teknologisk utvikling 
+                            og personvern, prisnivået på boliger, og den generelle livskvaliteten i en <a class="links-in-text" 
+                            href="https://www.sintef.no/fagomrader/arkitektur/slik-lager-vi-klimanoytrale-og-smarte-byer/" 
+                            target="_blank">smartby</a>. 
+                        </p>
+                        <p class="text">Våre umiddelbare reaksjoner er at dette vil medføre folk en del positive konsekvenser 
+                            i form av f.eks billigere bo og leiekostnader, bedre livskvalitet, miljøfordeler og økonomisk 
+                            vekst. Men samtidig kommer dette på bekostning av personvern og sårbarhet i form av 
+                            <a class="links-in-text" href="https://snl.no/dataangrep" target="_blank">dataangrep</a>. 
+                            Et slikt samfunn som er tungt avhengig av teknologi potensielt være svært utsatt for angrep, 
+                            i tillegg til digitale problemer og feil i programvare. Smartbyen vil bidra til flere effektive 
+                            løsninger innen f.eks. transport, noe som medfører et redusert utslipp av CO2. Effektiviseringen 
+                            av området ved hjelp av slik <a class="links-in-text" href="https://www.pwc.no/no/teknologi-
+                            omstilling/digitalisering-pa-1-2-3/internet-of-things.html" target="_blank">IoT-teknologi</a> 
+                            gir folk færre oppgaver i hverdagen og åpner for mer fritid sammen med venner og familie, 
+                            samt hobbyer og utdanninger.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="grid-picture2">
+                            <img class="pictures" src="../bilder/digitization.jpg" alt="Bilde av smartby og en iPad" 
+                                title="Foto: Gerd Altmann / Pixabay"> 
+                        </div>
+                        <figcaption>Foto: <a class="links-in-text" href="https://pixabay.com/users/geralt-9301/?utm_
+                            source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4705450" 
+                            target="_blank">Gerd Altmann</a> fra <a class="links-in-text" href="https://pixabay.com//?utm_
+                            source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=4705450" 
+                            target="_blank">Pixabay</a>
+                        </figcaption>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <!-- Brukt inspirasjon fra Tengels CompletePage-videoer som ligger i Canvas -->
+        <footer class="text">
+            <!-- Venstre del av footer med "vår" kontaktinformasjon -->   
+            <div class="footer-left">
+                <p class="footer-title">Kontakt oss:</p>
+                <p>Telefon: 67 23 50 00 <br>
+                   E-post: <a href="mailto:sentralbord@oslomet.no" class="footer-link">sentralbord@oslomet.no</a></p>
+            </div>
+            <!-- Midtre del av footer med link til "våre" sosiale medier -->
+            <div class="footer-mid">
+                <p class="footer-title">Sosiale medier:</p>
+                <p><a href="https://www.facebook.com/oslomet/" class="footer-link" target="_blank"><i class="fa fa-facebook"></i>
+                     &#20Facebook </a><br>
+                   <a href="https://twitter.com/oslomet" class="footer-link" target="_blank"><i class="fa fa-twitter"></i>
+                     Twitter</a> <br>
+                   <a href="https://no.linkedin.com/school/oslomet/" class="footer-link" target="_blank"><i class="fa fa-linkedin"></i>
+                     &#20LinkedIn</a></p>
+            </div>
+            <!-- Høyre del av footer med info om "oss" -->
+            <div class="footer-right">
+                <p class="footer-title">Besøk oss:</p>
+                <p>Campus Pilestredet <br>
+                    Pilestredet 35 <br>
+                    0166 Oslo
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
