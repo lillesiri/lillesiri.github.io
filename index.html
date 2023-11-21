@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Tag for å håndtere skjermstørrelse og responsivt design -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OsloMet</title>
+        <link rel="stylesheet" href="stylesheet/mystyle.css">
+        <!-- Ikoner til sosiale medier i footer -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head> 
+
+    <body>
+        <header>
+            <nav>
+                <!-- Brukt inspirasjon fra videoen til Tengel som ligger på Canvas om hamburgermeny -->
+                <div>
+                    <a href="index.html"><img class="logo-pic" 
+                        src="https://kommunikasjon.ntb.no/data/images/00339/dcb25c97-e530-4d45-804e-4883a9a9ce9d.png" 
+                        alt="Bilde av Oslomets logo">
+                    </a>
+                </div>
+                <!-- Hamburgermeny for responsivt design -->
+                <input id="menu-toggle" type="checkbox">
+                <label for="menu-toggle">
+                    <div class="menu-icon"></div>
+                </label>
+                <ul class="menu">
+                    <li class="nav-link"><a href="pages2-5/accessibility.html">Accessibility</a></li>
+                    <li class="nav-link"><a href="pages2-5/topical.html">Topical</a></li>
+                    <li class="nav-link"><a href="pages2-5/auditorium.html">Auditorium</a></li>
+                    <li class="nav-link"><a href="pages2-5/kantine.html">Kantine</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <article>
+                <h1>Velkommen til Oslomet</h1>
+                <div class="layout-top">
+                    <img class="first-pic" src="bilder/oslomet.jpg" alt="Bilde av Ellen Gleditschs hus" title="Foto: OsloMet"/>
+                    <figcaption>Ellen Gleditschs hus. Foto: <a class="links-in-text" href="https://www.oslomet.no/" 
+                        target="_blank">OsloMet</a>
+                    </figcaption>
+                    <div class="introduction">
+                        <p>Oslomet er en utrolig kul og moderne skole å gå på! Mange trygge omgivelser og utrolig dyktige 
+                            forelesere og lærerassistenter. Skolen ligger sentralt, rett ved trikkestoppet Holbergs Plass,
+                            togstasjonen Nationaltheatret og det kongelige slott. Dette er kulere enn å gå på UiO som er 
+                            omringet av triste murvegger, og er langt unna siviliasjonen. Buhu, synd for dem som går på UiO. 
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <h2 class="info-subheading">Info om Oslomet</h2>
+            <!-- Flex-layout for tre seksjoner med bilder og tekst -->
+            <div class="flex-layout-index">
+                <div class="img-and-text">
+                    <img class="pictures" src="bilder/intro-oslomet.jpg" alt="Bilde av en gang inne på OsloMet" title="Foto: OsloMet">
+                    <figcaption>Inne på campus. Foto: <a class="links-in-text" href="https://www.oslomet.no/" 
+                        target="_blank">OsloMet</a>
+                    </figcaption>
+                    <p class="text index-box"> Oslomet – storbyuniversitetet, tidligere Høgskolen i Oslo og Akershus (HiOA), 
+                        er et norsk statlig universitet med studiesteder i Oslo kommune (studiested Pilestredet) og 
+                        Lillestrøm kommune (studiested Kjeller). Universitetet vedtok i april 2020 at det skal ha to 
+                        fullverdige campuser i Oslo og på Romerike, noe som innebærer at en stor del av virksomheten skal 
+                        flyttes ut av Oslo. Oslomet driver forskning og utdanning innen samfunnsvitenskap, helsefag, 
+                        lærerutdanning, teknologi, kunst og design. 
+                    </p>
+                </div>
+                <div class="img-and-text">
+                    <img class="pictures" src="bilder/om-oslomet.png" alt="To blide elever i OsloMet-merch" title="Foto: OsloMet">
+                    <figcaption>Blide faddere. Foto: <a class="links-in-text" href="https://www.oslomet.no/" 
+                        target="_blank">OsloMet</a>
+                    </figcaption>
+                    <p class="text index-box">Oslomet har per dags dato 21 950 studenter. Universitetet tilbyr flere 
+                        studier innenfor mange retninger. Oslomet har totalt 37 bachelorstudier, 67 masterstuder og 7 
+                        phd-studier. Alt fra barnehagelærer til økonomi og administrasjon. Dette universitetet hadde i 
+                        2023 14 188 førstevalgsøkere. Dette illustrerer hvor gode studietilbud Oslomet har. 
+                    </p>
+                </div>
+                <div class="img-and-text">
+                    <img class="pictures" src="bilder/oslomet-master.jpg" alt="Samling av studenter i en aula" title="Foto: OsloMet" >
+                    <figcaption>Inne på campus. Foto: <a class="links-in-text" href="https://www.oslomet.no/" 
+                        target="_blank">OsloMet</a>
+                    </figcaption>
+                    <p class="text index-box">HiOA leverte 22. februar 2017 søknad om universitetsakkreditering til NOKUT, 
+                        med mål om å oppnå universitetsstatus innen kort tid. HiOA sendte den endelige søknaden til 
+                        Kunnskapsdepartementet 15. desember 2017, etter at NOKUT hadde konkludert med at institusjonen 
+                        oppfylte vilkårene for universitetsstatus. 12. januar 2018 vedtok regjeringen å tildele høgskolen 
+                        universitetsstatus med virkning fra samme dag. 
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Brukt inspirasjon fra Tengels CompletePage-videoer som ligger i Canvas -->
+        <footer>
+            <!-- Venstre del av footer med "vår" kontaktinformasjon -->
+            <div class="footer-left">
+                <p class="footer-title">Kontakt oss:</p>
+                <p>Telefon: 67 23 50 00 <br>
+                   E-post: <a href="mailto:sentralbord@oslomet.no" class="footer-link">sentralbord@oslomet.no</a></p>
+            </div>
+            <!-- Midtre del av footer med link til "våre" sosiale medier -->
+            <div class="footer-mid">
+                <p class="footer-title">Sosiale medier:</p>
+                <p><a href="https://www.facebook.com/oslomet/" class="footer-link" target="_blank"><i class="fa fa-facebook"/></i>
+                     &#20Facebook </a><br>
+                   <a href="https://twitter.com/oslomet" class="footer-link" target="_blank"><i class="fa fa-twitter"></i>
+                     Twitter</a> <br>
+                   <a href="https://no.linkedin.com/school/oslomet/" class="footer-link" target="_blank"><i class="fa fa-linkedin"></i>
+                     &#20LinkedIn</a></p>
+            </div>
+            <!-- Høyre del av footer med info om "oss" -->
+            <div class="footer-right">
+                <p class="footer-title">Besøk oss:</p>
+                <p>Campus Pilestredet <br>
+                   Pilestredet 35 <br>
+                   0166 Oslo
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
