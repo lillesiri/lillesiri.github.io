@@ -1,0 +1,814 @@
+/* Innhold
+  * Global styling
+    * :root
+    * body
+    * Header med navigasjon
+    * Tekst og layout
+    * Bilder
+    * Linker
+    * Footer
+  * Lokal styling
+    * index.html
+    * topical.html
+    * auditorium.html
+    * kantine.html
+    * accessibility.html
+  * Media query
+*/
+  
+/*
+  Vi har prøvd å samle selektorene på en systematisk måte, ved å gruppere 
+  elementer/klasser som hører sammen.
+  Følger html-strukturen fra topp til bunn, begynner altså med header, så main 
+  og til slutt footer.
+  Har samlet selektorer som brukes på flere (eller alle) sider først.
+  Deretter kommer det som er spesifikt for hver enkelt side.
+  Helt til sist ligger media query, som følger den samme strukturen som resten 
+  av dokumentet.
+  
+  Ved selektorer med flere egenskaper (properties), er disse sortert alfabetisk.
+*/
+
+/*======================== GLOBAL STYLING ====================================*/
+
+/* Spesielle farger som gjenbrukes flere steder */
+:root {
+    --oslomet-yellow: #ffdc00;
+    --site-color: #ffebcd;
+    --link-blue: #0055aa;
+    --menu-grey: #cecece;
+  }
+  
+  body {
+    background-color: var(--site-color);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+  }
+  
+  /*------------------------ Header med navigasjon -----------------------------*/
+  /* Navigasjonsbar øverst på siden */
+  nav {
+    background-color: var(--menu-grey);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;  
+  }
+  
+  /* OsloMets logo, fungerer som link til index.html */
+  .logo-pic {
+    object-fit: contain;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    transition-timing-function: ease;
+    width: 100px;
+  }
+  
+  .logo-pic:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Liste med linker til de andre sidene */
+  li {
+    margin-bottom: 0;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 0;
+    width: 90%;
+  }
+  
+  /* Legger elementene i listen ved siden av hverandre */
+  .menu {
+    display: flex;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0;
+  }
+  
+  .nav-link {
+    margin-top: 1vw;
+  }
+  
+  .nav-link a {
+    color: #000000;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration-line: none;
+    text-transform: uppercase;
+  }
+  
+  .nav-link a:hover {
+    border-bottom-color: #000000;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+  }
+  
+  /* Hamburger-ikon, blir synlig ved smal skjerm */
+  .menu-icon {
+    display: none;
+  }
+  
+  /* "Knapp" (input-box) som åpner menyen, synlig ved smal skjerm*/
+  #menu-toggle {
+    display: none;
+  }
+  
+  /*------------------------ Tekst og layout -----------------------------------*/
+  main {
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+  }
+  
+  h1 {
+    font-size: 3.4em;
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  
+  figcaption {
+    font-style: italic;
+    margin-top: 2px;
+    text-align: center;
+  }
+  
+  .text {
+    line-height: 25px;
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  /* Flex-container til forsidebilde/-tekst */
+  .layout-top {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+  
+  /*------------------------ Bilder --------------------------------------------*/
+  /* Hvit ramme rundt mindre bilder */
+  .pictures {
+    background-color: #ffffff;
+    height: auto;
+    max-width: 80%;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+  }
+  
+  /* Stort "forsidebilde" øverst */
+  .first-pic {
+    height: 550px;
+    max-width: 100%;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    position: relative;
+    width: 100%;
+  }
+  
+  /*------------------------ Linker --------------------------------------------*/
+  .links-in-text {
+    color: var(--link-blue);
+    text-decoration: none;
+  }
+  
+  .links-in-text:hover{
+    border-bottom-color: var(--link-blue);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+  }
+  
+  /*------------------------ Footer --------------------------------------------*/
+  /* Footer nederst på siden, grid med flere bokser med kontaktinfo */
+  footer {
+    background-color: var(--menu-grey);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 30px;
+  }
+  
+  .footer-left {
+    grid-column: 1/2;
+    margin-left: 50px;
+  }
+  
+  .footer-mid {
+    grid-column: 2/3;
+  }
+  
+  .footer-right {
+    grid-column: 3/4;
+  }
+  
+  .footer-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Matcher navigasjonsbaren */
+  .footer-link {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .footer-link:hover {
+    border-bottom-color: #000000;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+  }
+  
+  
+  /*======================== LOKAL STYLING =====================================*/
+  /* Følger den overgående "html"-strukturen, fra topp til bunn */
+  
+  /*------------------------ index.html ----------------------------------------*/
+  .introduction {
+    line-height: 25px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 80%;
+  }
+  
+  .info-subheading {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* Flex-container til tre bokser med bilde og tekst */
+  .flex-layout-index {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Flex-boxer med bilde øverst og tekst under */
+  .img-and-text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    width: 370px;
+  }
+  
+  /* Bildet i flex-boxen*/
+  .img-and-text img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  /* Teksten i flex-boxen*/
+  .index-box {
+    background-color: #f5deb3;
+    border-color: #000000;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    font-size: medium;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    width: 100%;
+  }
+  
+  /*------------------------ topical.html --------------------------------------*/
+  /* Forsidebilde */
+  .first-pic img {
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+  }
+  
+  /* Grid-container med plass til to bokser */
+  .grid-1x2 {
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr;
+    margin-top: 15px;
+  }
+  
+  .grid-1x2 div p {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  
+  /* Flex-container for å få listene til å stå ved siden av hverandre */
+  .list-in-text {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .list-in-text ul{
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  
+  .list-in-text ul li {
+    padding-top: 5px;
+  }
+  
+  .list-in-text ul h3 {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+  }
+  
+  .grid-picture1, .grid-picture2 {
+    align-items: center;
+    display: flex;
+    justify-content: right;
+  }
+  
+  /*------------------------ auditorium.hmtl -----------------------------------*/
+  /* Grid-container med tre kolonner */
+  .grid-1x3 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 30px;
+  }
+  
+  .grid-1x3 h2 {
+    margin-left: 0;
+  }
+  
+  /* Grid-box med bilde, strekker seg over to kolonner */
+  .auditorium-box1 {
+    grid-column: 1/3;
+  }
+  
+  .auditorium-box1 figcaption {
+    text-align: left;
+  }
+  
+  /* Grid-box med tekst */
+  .auditorium-box2 {
+    grid-column: 3/4;
+    padding-top: 25px;
+  }
+  
+  .auditorium-box3 {
+    grid-column: 1/2;
+    padding-top: 25px;
+  }
+  
+  .auditorium-box4 {
+    grid-column: 2/4;
+  }
+  
+  /* For å få figcaption under bildet */
+  .auditorium-box4 figure {
+    display: table;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+  }
+  
+  .auditorium-box4 figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    text-align: right;
+  }
+  
+  .auditorium-pic {
+    float:right;
+  }
+  
+  /*------------------------ kantine.html --------------------------------------*/
+  /* Grid-container med 3 kolonner og 3 rader */
+  .kantine {
+    display: grid;
+    grid-template-rows: 800px auto 400px;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 50px;
+  }
+  
+  /* Forsidebilde */
+  .box-1 {
+    background-image: url(../bilder/kantine-top.jpg);
+    background-size: cover;
+    grid-column: 1/ span3;
+  }
+  
+  .kantine h1 {
+    color: #ffffff;
+  }
+  
+  .kantine p, .kantine h2, .kantine a {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-align: left;
+  }
+  
+  .box-2 {
+    background-image: url(../bilder/kantine3.jpg);
+    background-size: cover;
+    height: 500px;
+  }
+  
+  .box-3 {
+    background-image: url(../bilder/kantine2.jpg);
+    background-size: cover;
+    height: 500px;
+  }
+  
+  .box-4 {
+    background-image: url(../bilder/unsplash.jpg);
+    background-size: cover;
+    height: 500px;
+  }
+  
+  /* Hvit ramme rundt mindre bilder, wrapper for box-2 - box-4 */
+  .kantine-pics {
+    background-color: #ffffff;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+  }
+  
+  .box-5 {
+    grid-column: 1/ span3;
+  }
+  
+  /*------------------------ accessibility.html --------------------------------*/
+  /* Denne siden er ikke lik de andre og har derfor mye egen styling */
+  
+  /*----- Header med navigasjon -----*/
+  .header-accessibility {
+    background-color: var(--oslomet-yellow);
+    color: #000000;
+    display: block;
+    font-family: Courier;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    position: relative;
+    text-align: center; 
+  }
+  
+  .nav-accessibility {
+    background-color: var(--oslomet-yellow);
+    display: block;
+  }
+  
+  .label-accessibility {
+    display: block;
+  }
+  
+  /* Knapp for å åpne dropdown-meny */
+  .dropbutton {
+    background-color: var(--oslomet-yellow);
+    border: none;
+    cursor: pointer;
+    color: #000000;
+    font-size: 2.875em;
+    padding-left: 30px;
+  }
+  
+  .dropdown {
+    font-family: Courier;
+    left: 0;
+    position: absolute;
+    top: 10px;
+  }
+  
+  .dropdown-content {
+    background-color: var(--oslomet-yellow);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    display: none;
+    min-width: 160px;
+    position: absolute;
+  }
+  
+  .dropdown-content a {
+    color: #000000;
+    display: block;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 12px;
+    text-decoration: none;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbutton {
+    background-color: var(--oslomet-yellow);
+  }
+  
+  /*----- Tekst og layout -----*/
+  .body-accessibility h1 {
+    font-size: 2.4em;
+    text-align: center;
+  }
+  
+  .body-accessibility h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  
+  /* Må overskrives slik siden de andre sidene har satt margin på main */
+  .main-accessibility {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+  }
+  
+  /* Ingress-tekst */
+  .info { 
+    line-height: 25px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    text-align: center;
+  }
+  
+  /* Flex-container */
+  .article-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 30px;
+  }
+  
+  /* Flex-boxer med bilde og tekst */
+  .accessibility-box-1, .accessibility-box-2, .accessibility-box-3,
+  .accessibility-box-4 {
+    background: #f1f1f1;
+    flex: 40%;
+    font-size: 0.937em;
+    line-height: 25px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    max-height: 0%;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    text-align: left;
+  }
+  
+  /*----- Bilder -----*/
+  .pictures-accessibility {
+    height: auto;
+    max-width: 100%;
+  }
+  
+  /* For å overskrive stylingen fra de andre sidene */
+  .figcaption-accessibility {
+    font-style: normal;
+    text-align: left;
+  }
+  
+  /*----- Footer -----*/
+  .footer-accessibility {
+    background-color: #808080;
+  }
+  
+  
+  /*======================== MEDIA QUERY =======================================*/
+  /* Media query for skjermer mindre enn 800px */
+  
+  @media (max-width: 800px) {
+    /*---------------------- Header med navigasjon med dropdown-meny -----------*/
+    /* Gjør om menyen til rader i stedet for kolonner */
+    .menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: right;
+      list-style-type: none;
+      padding-top: 50px;
+    }
+    
+    /* Linkene som ligger i .menu (i en ul), endret font size og margin-bottom */ 
+    .menu a {
+      font-size: 1.06em;
+      margin-bottom: 10px;
+    }
+  
+    /* Hamburger-meny-ikonet gjøres synlig, settes øverst til høyere i 
+      navigasjonsbaren og får gitt størrelse */
+    .menu-icon {
+      background-image: url(../bilder/hamburger-icon.svg.png);
+      background-size: cover;
+      cursor: pointer;
+      display: block;
+      height: 35px;
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      width: 35px;
+    }
+  
+    /* Gjør linkene i "ul" usynlige */
+    .menu li {
+      height: 0px;
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 0;
+      overflow: hidden;
+      padding-bottom: 2px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 10px;
+    }
+  
+    /* Når hamburgermeny-ikonet blir trykket, vises listen */
+    #menu-toggle:checked ~.menu li {
+      height: 20px;
+      width: auto;
+    } 
+  
+    #menu-toggle:checked ~.menu {
+      background-color: #ffffff;
+      border-color: #000000;
+      border-style: solid;
+      border-width: 2px;
+    }
+  
+    /*---------------------- Tekst og layout -----------------------------------*/
+    main {
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 0;
+    } 
+  
+    /* Endrer størrelse på p-elementene og linkene som har klassene .text og 
+      .links-in-text */
+    .text {
+      font-size: larger;
+    }
+  
+    /*---------------------- Linker --------------------------------------------*/
+    .links-in-text {
+      font-size: large;
+    }
+    
+    /*---------------------- Bilder --------------------------------------------*/
+    .pictures {
+      max-width: 100%;
+      padding-bottom: 0px;
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-top: 0px;
+    }
+    
+    .first-pic {
+      height: 300px;
+    }
+    
+    /*---------------------- Footer --------------------------------------------*/
+    footer {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  
+    .footer-left, .footer-mid, .footer-right {
+      margin-left: 10px;
+    }
+  
+    /*---------------------- index.html ----------------------------------------*/
+    .introduction {
+      font-size: larger;
+      line-height: 25px;
+    }
+  
+    /*---------------------- topical.html --------------------------------------*/
+    /* Gjør om grid til type flexbox, slik at bildene kommer øverst og teksten 
+      under */
+    .grid-1x2 {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  
+    .list-in-text{
+        flex-direction: column;
+    }
+  
+    /*---------------------- auditorium.html -----------------------------------*/
+    /* Gjør om grid til flex-container */
+    .grid-1x3 {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* For å få bildet øverst og teksten under */
+    .reverse {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  
+    .auditorium-box2, .auditorium-box3 {
+      margin-left: 10px;
+    }
+  
+    .auditorium-box1 figcaption, .auditorium-box4 figcaption {
+      text-align: center;
+    }
+  
+    /*---------------------- kantine.html --------------------------------------*/
+    /* Gjør om grid til flex */
+    .kantine {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    /* Fjerner hvit ramme rundt bilder */
+    .kantine-pics {
+      background-color: var(--site-color);
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0;
+    }
+  
+    /*---------------------- accessibility.html --------------------------------*/
+  
+    /* Dropdown-meny */
+    .dropdown {
+      left: auto;
+      position: relative;
+      top: auto;
+    }
+    
+    /* Knapp til dropdown-menyen */
+    .dropbutton {
+      padding-bottom: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
+    }
+  
+    .dropdown-content {
+      box-shadow: none;
+      min-width: 100%;
+    }
+  
+    .menu-icon-accessibility {
+      display: block;
+    }
+  
+    .footer-accessibility {
+      text-align: center;
+    }
+  }
